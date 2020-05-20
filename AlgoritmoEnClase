@@ -1,0 +1,24 @@
+frase = input("Ingrese una frase de no mas de 10 palabras: ")
+contV=0
+contC=0
+contPalabra=0
+auxPalabra=""
+for i in frase:
+    auxPalabra = auxPalabra + i
+    if i == " ": #1 OE
+        contPalabra=contPalabra + 1 #1 OE
+        auxPalabra="" #1 OE
+
+if contPalabra<=10:
+    for i in frase:
+        if i == "a" or i == "A" or i == "e" or i == "E" or i == "i" or i == "I" or i == "o" or i == "O" or i == "u" or i == "U": #1 OE
+            contV = contV + 1 #2 OE
+        elif i != " ":
+            contC = contC + 1 #1 OE
+
+    print("La frase contiene ", contV, " vocales y ", contC, " consonantes") #1 OE
+else:
+    print("Se excedio la cantidad de palabras permitidas") #1 OE
+
+
+    #T()= 1 + 1 + 1 + 1 + 2 + 1 + 1 + 1 = 9   O(n)=
